@@ -52,41 +52,16 @@ To run the tests run the following in your terminal
 $ docker-compose run --rm app bundle exec rspec
 ```
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
 ## Built With
 
 * [Ruby on Rails](https://rubyonrails.org/) - The web framework used
 * [Materialize](https://github.com/mkhairi/materialize-sass) - The css framework used
 * [Redis](https://redis.io/) - Used to generate a database of schedule jobs
 * [Sidekiq](https://github.com/mperham/sidekiq) - Used to process the schedule jobs
+* [Sidekiq-scheduler](https://github.com/moove-it/sidekiq-scheduler) - Used to schedule sending emails and job search on the web
+* [PostgreSQL](https://www.postgresql.org/) - SGDB
+* [PgSearch](https://github.com/Casecommons/pg_search) - Used to make full text search on database
 * [MailCatcher](https://mailcatcher.me/) - Used to intercept the sended emails on development environment
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
 
 ## Authors
 
@@ -94,8 +69,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **Jholdy Damasceno** - *Initial work* - [jholdy](https://github.com/jholdy)
 * **Klever** - *Initial work* - [klever316](https://github.com/klever316)
 * **André Gonçalves Rodrigues** - *Initial work* - [andregr15](https://github.com/andregr15)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
