@@ -1,17 +1,24 @@
 require 'open-uri'
 
 class ProgramathorService
-
   def initialize(page='1')
-    html = open('https://programathor.com.br/jobs/page' +"/#{page.to_s}")
+    html = open("https://programathor.com.br/jobs/page/#{page}")
     @doc = Nokogiri::HTML(html, nil, Encoding::UTF_8.to_s)
   end
+  def jobs
+    list = []
+    @doc.css('.cell-list').each do |job|
+      categories = []
+      title = job.css('.cell-list-content').xpath('h3').first.content
+      link = job.xpath('a').first['href']
+      job.css('.tag-list').each {|category| categories.push(category: category.children.first.text)}
 
-  def perform
-    jobs = []
-    @doc.css('html body div.wrapper-jobs-list div.container div.row div.col-md-9').each do |jobItem|
-      
+      html = open("https://programathor.com.br#{link}")
+      detail = Nokogiri::HTML(html, nil, Encoding::UTF_8.to_s)
+      description = detail.css('.wrapper-content-job-show').xpath('div[2]').text
+      address = detail.css('.wrapper-details-job-show').xpath('p[4]/a').text
+      list.push(title: title, link: link, categories: categories, description: description, address: address)
     end
-    return jobs
+    list
   end
 end
