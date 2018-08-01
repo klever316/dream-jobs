@@ -1,4 +1,5 @@
 require 'spec_helper'
+require './app/services/programathor_service'
 
 describe ProgramathorService do
   it 'successfully scrap' do

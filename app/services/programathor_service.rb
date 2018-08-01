@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'nokogiri'
 
 class ProgramathorService
   def initialize(page='1')
