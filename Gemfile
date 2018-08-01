@@ -11,7 +11,10 @@ gem 'material_icons'
 gem 'redis'
 gem 'sidekiq'
 gem 'sidekiq-scheduler'
-
+gem 'webmock'
+gem 'nokogiri'
+gem 'rest-client'
+gem 'vcr'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
 # Use postgresql as the database for Active Record
@@ -61,7 +64,7 @@ group :development do
 end
 
 group :test do
-  gem 'ffaker'
+  gem 'faker'
   gem 'factory_bot_rails'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
