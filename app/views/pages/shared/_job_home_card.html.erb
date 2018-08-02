@@ -5,12 +5,13 @@
     
     <p class="green-text"><strong><%= j.location %></strong></p>
 
-    <p class="job-description left-align"><%= j.description[0..140] + '...' %></p>
+    <p class="job-description left-align"><%= j.description[0..130] + '...' %></p>
     
     <br/>
     <div class="divider"></div>
     <br/>
     
-    <a href="<%= j.url %>" class="waves-effect waves-light btn">Mais detalhes</a>
+    <%= link_to 'Mais detalhes', jobs_show_path(j), class:'waves-effect waves-light btn' %>
+    
   </div>
 </div>

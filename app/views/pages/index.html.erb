@@ -18,12 +18,14 @@
         <% end %>
       </div>
 
-      <div class="row">
-        <span>
-          Para receber a nossa Newsletter 
-          <a href="#">clique aqui.</a>
-        </span>
-      </div>
+      <% if !current_user %>
+        <div class="row">
+          <span>
+            Para receber a nossa Newsletter 
+            <a href="/users/sign_up">clique aqui.</a>
+          </span>
+        </div>
+      <% end %>
       
     </div>
   </div>
