@@ -6,6 +6,7 @@ class ProgramathorService
     html = open("https://programathor.com.br/jobs/page/#{page}")
     @doc = Nokogiri::HTML(html, nil, Encoding::UTF_8.to_s)
   end
+  
   def jobs
     list = []
     @doc.css('.cell-list').each do |job|
