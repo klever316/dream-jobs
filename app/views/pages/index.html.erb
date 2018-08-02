@@ -1,7 +1,30 @@
-<div class="container">
+<div class="container center-align">
   <div class="card">
     <div class="card-content">
-      <h1>Index</h1>
+      
+      <div class="row center-align">
+        <h4 class="title">Bem vindo ao Dream Jobs.</h4>
+      </div>
+      
+      <div class="row center-align">
+        <em><h6 class="title">Encontre o job do seus sonhos aqui!</h6></em>
+      </div>
+
+      <div class="row">
+        <% 3.times do %>
+          <div class="col s12 m4 l4">
+            <%= render '/pages/shared/job_home_card' %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="row">
+        <span>
+          Para receber a nossa Newsletter 
+          <a href="#">clique aqui.</a>
+        </span>
+      </div>
+      
     </div>
   </div>
 </div>
