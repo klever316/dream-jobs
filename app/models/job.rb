@@ -8,5 +8,5 @@ class Job < ApplicationRecord
   validates :title, :description, :location, presence: true
 
   # include PgSearch
-  multisearchable :search, :against => [:title, :description, :location, :categories]
+  multisearchable :against => [:title, :description, :location, :categories]
 end
