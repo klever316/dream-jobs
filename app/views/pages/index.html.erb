@@ -11,9 +11,9 @@
       </div>
 
       <div class="row">
-        <% 3.times do %>
+        <% @jobs.each do |j| %>
           <div class="col s12 m4 l4">
-            <%= render '/pages/shared/job_home_card' %>
+            <%= render partial:'/pages/shared/job_home_card', locals: { j: j } %>
           </div>
         <% end %>
       </div>
