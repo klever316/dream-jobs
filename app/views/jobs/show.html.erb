@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="card center-align">
+		<div class="card-content">
+			<span class="card-title">
+				<strong>
+					<%= @job.title %>
+				</strong>
+			</span>
+			<div class="divider"></div>
+			<p class="green-text">
+				<strong class="valign-wrapper">
+					<i class="material-icons prefix">place</i>
+					<%= @job.location %>
+				</strong>
+			</p>
+			<br />
+			
+			<p class="left-align">
+				<%= @job.description %>
+			</p>
+			
+			<br />
+			<div class="actions">
+				<a href="<%= @job.url %>" class="btn waves-effect waves-light">
+					Se inscrever
+					<i class="material-icons right">send</i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
