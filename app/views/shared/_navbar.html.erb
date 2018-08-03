@@ -19,12 +19,14 @@
 						<div class="col s12 " >
 							<div class="row" id="topbarsearch">
 								<div class="input-field col s6 s12 white-text">
-									<i class="white-text material-icons prefix">search</i>
-									<input type="text" placeholder="search" id="autocomplete-input" class="autocomplete white-text search" >
-									</div>
+									<%= form_with url: jobs_search_path(:search), local: true, method: :get do |f| %>
+										<i class="white-text material-icons prefix">search</i>
+										<%= f.text_field :search, class: 'white-text search', placeholder: 'Pesquisar vagas'%>
+									<% end %>
 								</div>
 							</div>
-						</div>          
+						</div>
+					</div>          
 				</li>      
 				<% if current_user %>
           <li><a href="/users/edit">Perfil</a></li>

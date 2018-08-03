@@ -4,6 +4,11 @@ class JobsController < ApplicationController
   def show
   end
 
+  def search
+    items = PgSearch.multisearch('qui')
+    @jobs = items.map(&:searchable)
+  end
+
   private
 
   def set_job
