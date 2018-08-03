@@ -3,7 +3,12 @@
     <span class="card-title"><%= j.title %></span>
     <div class="divider"></div>
     
-    <p class="green-text"><strong><%= j.location %></strong></p>
+    <p class="green-text">
+      <strong class="valign-wrapper">
+        <i class="material-icons prefix">place</i>
+        <%= j.location %>
+      </strong>
+    </p>
 
     <p class="job-description left-align"><%= j.description[0..130] + '...' %></p>
     
