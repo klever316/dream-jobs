@@ -1,0 +1,29 @@
+<div class="container">
+  <% @jobs.each do |j| %>
+    <div class="row">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title"><%= j.title %></span>
+          <div class="divider"></div>
+          
+          <p class="green-text">
+            <strong class="valign-wrapper">
+              <i class="material-icons prefix">place</i>
+              <%= j.location %>
+            </strong>
+          </p>
+
+          <div class="divider"></div>
+          
+          <p class="left-align"><%= j.description[0..250] + '...' %></p>
+          
+          <br/>
+          <div class="divider"></div>
+          <br/>
+          
+          <%= link_to 'Mais detalhes', jobs_show_path(j), class:'waves-effect waves-light btn right' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
